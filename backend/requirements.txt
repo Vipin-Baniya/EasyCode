@@ -1,0 +1,56 @@
+# ── Core Framework ────────────────────────────────────────────────────────────
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+python-multipart==0.0.20
+
+# ── Database ──────────────────────────────────────────────────────────────────
+sqlalchemy==2.0.36
+alembic==1.14.0
+asyncpg==0.30.0          # PostgreSQL async driver
+psycopg2-binary==2.9.10  # Sync fallback / Alembic
+
+# ── Cache / Queue ─────────────────────────────────────────────────────────────
+redis==5.2.1
+hiredis==3.1.0
+celery==5.4.0
+
+# ── Auth & Security ───────────────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-dotenv==1.0.1
+
+# ── Config & Validation ───────────────────────────────────────────────────────
+pydantic==2.10.3
+pydantic-settings==2.6.1
+
+# ── LLM Integration ───────────────────────────────────────────────────────────
+anthropic==0.40.0        # Latest SDK with claude-sonnet-4-20250514 support
+tiktoken==0.8.0          # Token counting
+
+# ── HTTP Client ───────────────────────────────────────────────────────────────
+httpx==0.28.1
+aiohttp==3.11.10
+tenacity==9.0.0          # Retry / back-off
+
+# ── Diff / Code Analysis ──────────────────────────────────────────────────────
+unidiff==0.7.5
+gitpython==3.1.43
+
+# ── Linting (runtime checks in Verifier) ─────────────────────────────────────
+ruff==0.8.4              # Fast Python linter used by Verifier
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest==8.3.4
+pytest-asyncio==0.24.0
+pytest-cov==6.0.0
+pytest-timeout==2.3.1
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+loguru==0.7.3
+python-slugify==8.0.4
+pyyaml==6.0.2
+jsonschema==4.23.0
+
+# ── Monitoring ────────────────────────────────────────────────────────────────
+sentry-sdk[fastapi]==2.19.2
+prometheus-client==0.21.1
